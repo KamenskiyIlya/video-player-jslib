@@ -18,6 +18,7 @@
       border-style: none;
       cursor: pointer;
       margin-left: 5px;
+      flex-grow: 0;
     }
 
     button.pause-button {
@@ -25,6 +26,7 @@
       border-style: none;
       cursor: pointer;
       margin-left: 5px;
+      flex-grow: 0;
     }
 
     button.mute-button {
@@ -32,6 +34,7 @@
       border-style: none;
       cursor: pointer;
       margin-left: 5px;
+      flex-grow: 0;
     }
 
     button.volume-button {
@@ -39,6 +42,15 @@
       border-style: none;
       cursor: pointer;
       margin-left: 5px;
+      flex-grow: 0;
+    }
+
+    button.fullscreen-button {
+      background-color: transparent;
+      border-style: none;
+      cursor: pointer;
+      flex-grow: 0;
+      margin-right: 5px;
     }
 
     #player {
@@ -54,8 +66,14 @@
     }
 
     #player .bottom-controls {
+      display: flex;
+      flex-direction: row;
       flex-grow: 0;
       background-color: black;
+    }
+
+    .filling-contorls-block {
+      flex-grow: 1;
     }
 
     i.play-icon {
@@ -74,6 +92,9 @@
       color: white;
     }
 
+    i.fullscreen-icon {
+      color: white;
+    }
 
   </style>
 </head>
@@ -96,6 +117,12 @@
 
       <button class='js-volume-button volume-button' hidden>
         <i class="fa fa-volume-off volume-off-icon" aria-hidden="true"></i>
+      </button>
+
+      <div class='filling-contorls-block'></div>
+
+      <button class='js-fullscreen-button fullscreen-button'>
+        <i class="fa fa-expand fullscreen-icon" aria-hidden="true"></i>
       </button>
     </div>
   </div>
