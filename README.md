@@ -5,7 +5,7 @@
 
 Этот проект представляет из себя страницу с настроенным видеоплеером. У плеера есть базовые функции - воспроизвести, поставить на паузу, убрать звук, вернуть звук и вывести на полный экран.
 
-![Видео-плеер-в-браузере-Google-Chrome-2026-02-11-21-00-52-_online-video-cutter com_-_1_](https://github.com/user-attachments/assets/1ffc2ef8-5104-4eab-9982-af7f90416b95)
+<img width="1189" height="836" alt="image" src="https://github.com/user-attachments/assets/5bd95c92-2a8f-4b4a-b364-1726416bede8" />
 
 ## Пример сайта
 
