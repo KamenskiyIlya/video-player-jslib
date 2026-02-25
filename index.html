@@ -5,10 +5,11 @@
   <title>Видео плеер в браузере</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel='icon' href='logo.png' type='image/png'>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
   <style type="text/css">
 
     body {
-      margin: 6px;
+      margin: 7px;
     }
 
     button.player_button {
@@ -37,19 +38,55 @@
       display: flex;
       flex-direction: row;
       flex-grow: 0;
+      justify-content: space-between;
       background-color: black;
       padding: 4px;
-      column-gap: 11px;
       padding-right: 8px;
       padding-top: 3px;
     }
 
-    .filling-contorls-block {
-      flex-grow: 1;
+    .left-buttons {
+      display: flex;
+      flex-direction: row;
+      column-gap: 10px;
     }
 
     i.player_button_icon {
       color: white;
+    }
+
+    .time {
+      font-family: "Roboto", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings:
+        "wdth" 100;
+    }
+
+    .timer {
+      color: white;
+      display: flex;
+      align-items: center;
+      flex-grow: 0;
+    }
+
+    .viewing-panel {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+    }
+
+    .time-slider {
+      flex-grow: 1;
+    }
+
+    .current-time {
+      padding-left: 10px;
+    }
+
+    .time-duration {
+      padding-right: 5px;
     }
 
   </style>
@@ -59,27 +96,42 @@
     <div class="js-video-container video-container"></div>
     
     <div class='bottom-controls'>
-      <button class="js-play-button player_button">
-        <i class="fa fa-play player_button_icon" aria-hidden="true"></i>
-      </button>
+      <div class="left-buttons">
+        <button class="js-play-button player_button">
+          <i class="fa fa-play player_button_icon" aria-hidden="true"></i>
+        </button>
 
-      <button class="js-pause-button player_button" hidden>
-        <i class="fa fa-pause player_button_icon" aria-hidden="true"></i>
-      </button>
+        <button class="js-pause-button player_button" hidden>
+          <i class="fa fa-pause player_button_icon" aria-hidden="true"></i>
+        </button>
 
-      <button class='js-mute-button player_button'>
-        <i class="fa fa-volume-up player_button_icon" aria-hidden="true"></i>
-      </button>
+        <button class='js-mute-button player_button'>
+          <i class="fa fa-volume-up player_button_icon" aria-hidden="true"></i>
+        </button>
 
-      <button class='js-volume-button player_button' hidden>
-        <i class="fa fa-volume-off player_button_icon" aria-hidden="true"></i>
-      </button>
+        <button class='js-volume-button player_button' hidden>
+          <i class="fa fa-volume-off player_button_icon" aria-hidden="true"></i>
+        </button>
+      </div>
 
-      <div class='filling-contorls-block'></div>
+      <div class="viewing-panel">
+        <div class="timer">
+          <span class="time js-current-time current-time"></span>
+        </div>
 
-      <button class='js-fullscreen-button player_button'>
-        <i class="fa fa-expand player_button_icon" aria-hidden="true"></i>
-      </button>
+        <div class="time-slider">
+        </div>
+
+        <div class="timer">
+          <span class="time js-duration time-duration"></span>
+        </div>
+      </div>
+
+      <div class="right-buttons">
+        <button class='js-fullscreen-button player_button'>
+          <i class="fa fa-expand player_button_icon" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
   </div>
 
